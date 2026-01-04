@@ -1,0 +1,9 @@
+<div>
+    <button>
+        //Property binding to set the src attribute of img tag
+        <img [src]="'assets/users/'+selectedUser.avatar" 
+            [alt]="selectedUser.name"/>
+        //Interpolation to display the name of the selected user
+        <span>{{ selectedUser.name}}</span>
+    </button>
+</div>
