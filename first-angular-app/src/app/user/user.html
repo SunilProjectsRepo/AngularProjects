@@ -1,9 +1,11 @@
 <div>
-    <button>
-        //Property binding to set the src attribute of img tag
+    <button (click)="onSelectUser()">
+        <!--//Property binding to set the src attribute of img tag
         <img [src]="'assets/users/'+selectedUser.avatar" 
-            [alt]="selectedUser.name"/>
-        //Interpolation to display the name of the selected user
-        <span>{{ selectedUser.name}}</span>
+            [alt]="selectedUser.name"/-->
+        <img [src]="imagePath()"
+            [alt]="selectedUser().name"/> <!-- for signal function notation is used  instead of selectedUser -->
+        <!--Interpolation to display the name of the selected user -->
+        <span>{{ selectedUser().name}}</span> <!-- for signal function notation is used instead of selectedUser -->
     </button>
 </div>
